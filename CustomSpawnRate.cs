@@ -22,7 +22,7 @@ namespace CustomSpawnRate
 		public override ConfigScope Mode => ConfigScope.ServerSide;
 
         [DefaultValue(1)]
-        [Range(1, 1000)]
+        [Range(1, 10000)]
         [LabelKey("$Mods.CustomSpawnRate.Configs.Common.SpawnRateLabel")]
         [TooltipKey("$Mods.CustomSpawnRate.Configs.Common.SpawnRateTooltip")]
         public int SpawnRate;
