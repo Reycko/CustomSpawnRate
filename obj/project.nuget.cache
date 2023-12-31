@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cKWOhftVbKZi1Yif1hDSwDNdtEJZrr7+EgIfeUBLU+ju8B/er1X5neBpLcCX5cpaW/0mj59VPFB16S9klV9FfQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\reycko\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CustomSpawnRate\\CustomSpawnRate.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\reycko\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

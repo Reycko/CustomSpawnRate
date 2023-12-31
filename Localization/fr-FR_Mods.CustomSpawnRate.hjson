@@ -1,0 +1,15 @@
+Configs: {
+	ModConfigSpawnRates.DisplayName: Taux d'apparaition customizé
+
+	Common: {
+		SpawnRateLabel: Taux d'apparaition
+		SpawnRateTooltip:
+			'''
+			Le multiplicateur du taux d'apparaition actuel. Doit être un nombre entier entre 1 à 1000.
+			Note: Si le taux d'apparaition est trop haut, la valeur va etre limité a 1 spawn par tick.
+			(1 seconde = 60 ticks)
+			'''
+		DisableOnBossLabel: Desactiver si Boss
+		DisableOnBossTooltip: Mets le taux d'apparaition à sa valeur normale si un boss est vivant.
+	}
+}

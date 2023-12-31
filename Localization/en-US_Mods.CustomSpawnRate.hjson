@@ -1,0 +1,15 @@
+Configs: {
+	ModConfigSpawnRates.DisplayName: Custom Spawn Rate
+
+	Common: {
+		SpawnRateLabel: Spawn Rate
+		SpawnRateTooltip:
+			'''
+			The multiplier to the current spawn rate. Must be a whole number between 1 and 10000. 
+			Note: If the spawn multiplier is too high, the value will be clamped to 1 spawn per tick. 
+			(1 second = 60 ticks)
+			'''
+		DisableOnBossLabel: Disable On Boss
+		DisableOnBossTooltip: Turns the spawn rate back to normal if a boss is currently alive.
+	}
+}

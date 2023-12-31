@@ -1,0 +1,15 @@
+Configs: {
+	ModConfigSpawnRates.DisplayName: Tasa de generación personalizada
+
+	Common: {
+		SpawnRateLabel: Tasa de generación
+		SpawnRateTooltip:
+			'''
+			     	El multiplicador de la tasa de generación actual. Debe ser un número entero entre 1 y 10000.
+			         Nota: Si el multiplicador de generación es demasiado alto, el valor se limitará a 1 generación por tick.
+			         (1 segundo = 60 tics)
+			'''
+		DisableOnBossLabel: Desactivar en jefe
+		DisableOnBossTooltip: Vuelve la tasa de generación a la normalidad si un jefe está vivo actualmente.
+	}
+}

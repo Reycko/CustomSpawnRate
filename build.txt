@@ -1,0 +1,3 @@
+displayName = Custom Spawn Rates
+author = Reycko
+version = 1.0
