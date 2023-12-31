@@ -1,1 +1,8 @@
 Custom Spawn Rates is a simple mod that lets you customize spawn rates of enemies.
+
+Source Code: https://github.com/Reycko/CustomSpawnRate
+
+Translators:
+Soldier3018 - Spanish translation
+Sheeshhyy - Russian translation
+(Users mentionned might have different usernames)
