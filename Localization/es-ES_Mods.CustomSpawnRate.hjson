@@ -11,5 +11,13 @@ Configs: {
 			'''
 		DisableOnBossLabel: Desactivar en jefe
 		DisableOnBossTooltip: Vuelve la tasa de generación a la normalidad si un jefe está vivo actualmente.
+		// CustomMaxSpawnsToggleLabel: Enable Changing Max Spawns
+		/* CustomMaxSpawnsToggleTooltip:
+			'''
+			By default, this mod scales the max spawned enemies with the spawn rate. 
+			Turning this on lets you use a custom value instead.
+			''' */
+		// CustomMaxSpawnsLabel: Max Spawns
+		// CustomMaxSpawnsTooltip: Requires 'Enable Chaging Max Spawns' to be on.
 	}
 }

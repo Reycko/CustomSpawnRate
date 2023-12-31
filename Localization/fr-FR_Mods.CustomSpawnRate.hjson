@@ -11,5 +11,13 @@ Configs: {
 			'''
 		DisableOnBossLabel: Desactiver si Boss
 		DisableOnBossTooltip: Mets le taux d'apparaition à sa valeur normale si un boss est vivant.
+		CustomMaxSpawnsToggleLabel: Activer le changement des apparaitions maximum
+		CustomMaxSpawnsToggleTooltip:
+			'''
+			Par default, ce mod change le nombre d'apparaitions maximum avec le taux d'apparaition.
+			Activer ceci permets de mettre une value customizée à la place.
+			'''
+		CustomMaxSpawnsLabel: Apparaitions maximum
+		CustomMaxSpawnsTooltip: "'Activer le changement des apparaitions maximum' doit etre activé"
 	}
 }

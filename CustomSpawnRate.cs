@@ -32,6 +32,17 @@ namespace CustomSpawnRate
         [TooltipKey("$Mods.CustomSpawnRate.Configs.Common.DisableOnBossTooltip")]
         public bool DisableOnBoss;
 
+        [DefaultValue(false)]
+        [LabelKey("$Mods.CustomSpawnRate.Configs.Common.CustomMaxSpawnsToggleLabel")]
+        [TooltipKey("$Mods.CustomSpawnRate.Configs.Common.CustomMaxSpawnsToggleTooltip")]
+        public bool CustomMaxSpawnsToggle;
+
+        [DefaultValue(5)]
+        [Range(1, 10000)]
+        [LabelKey("$Mods.CustomSpawnRate.Configs.Common.CustomMaxSpawnsLabel")]
+        [TooltipKey("$Mods.CustomSpawnRate.Configs.Common.CustomMaxSpawnsTooltip")]
+        public int CustomMaxSpawns;
+
         public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref NetworkText message)
         {
             if (!NetMessage.DoesPlayerSlotCountAsAHost(whoAmI)) // Player is not host
@@ -51,22 +62,22 @@ namespace CustomSpawnRate
             ModConfigSpawnRates config = ModContent.GetInstance<ModConfigSpawnRates>(); // Get the mod's config.
 
             // TODO: Optimize following code
-            if (config.DisableOnBoss) // If disableOnBoss is true, don't alter spawnRate and maxSpawns.
+            if (config.DisableOnBoss) // If disableOnBoss is true, check if a boss is alive.
             {
                 foreach (NPC npc in Main.npc)
                 {
                     if (npc.active && npc.boss)
                     {
-                        return; // A boss is alive, return.
+                        return; // A boss is alive, don't execute the following code.
                     }
                 }
             }
 
             // We're setting the max spawns here to prevent it being wrong due to setting it later overwriting the current value.
-            maxSpawns = spawnRate * 5;
+           maxSpawns = (config.CustomMaxSpawnsToggle ? config.CustomMaxSpawns : spawnRate * 5); // If the user has enabled custom max spawns, use that value instead
 
             // This adds the Calming/Battle potion multiplier. Priority is Battle > Calming > Neither.
-            double calmingOrBattle = (player.HasBuff(13) ? 2 : player.HasBuff(106) ? 0.5 : 1);
+            double calmingOrBattle = (player.HasBuff(13) ? 2 : player.HasBuff(106) ? 0.5 : 1); // Battle Buff ID is 13, Calming Buff ID is 106.
 
             /* 
              * Set spawn rate.
