@@ -74,7 +74,7 @@ namespace CustomSpawnRate
             }
 
             // We're setting the max spawns here to prevent it being wrong due to setting it later overwriting the current value.
-           maxSpawns = (config.CustomMaxSpawnsToggle ? config.CustomMaxSpawns : spawnRate * 5); // If the user has enabled custom max spawns, use that value instead
+           maxSpawns = (config.CustomMaxSpawnsToggle ? config.CustomMaxSpawns : spawnRate * config.SpawnRate); // If the user has enabled custom max spawns, use that value instead
 
             // This adds the Calming/Battle potion multiplier. Priority is Battle > Calming > Neither.
             double calmingOrBattle = (player.HasBuff(13) ? 2 : player.HasBuff(106) ? 0.5 : 1); // Battle Buff ID is 13, Calming Buff ID is 106.
