@@ -84,10 +84,10 @@ namespace CustomSpawnRate
             /* 
              * Set spawn rate.
              * We're dividing here because of how spawn rate works, by example, a spawn rate of 600 actually means 1/600 (~0.17%) chance for a new enemy to spawn.
-             * E.G. Spawn rate of 5, on pre-hardmode forest (600) = 600 / (5 * calmingOrBattle), 
+             * E.G. Spawn rate of 5, on pre-hardmode forest (600) = 600 / 5, 
              * which returns 120 w/o Calming/Battle buffs, 60 w/ Battle buff, and 240 w/ Calming buff.
             */
-            spawnRate /= System.Math.Max((int)System.Math.Floor(config.SpawnRate * calmingOrBattle), 1); // Since the return value is an integer, make sure to have a whole number.
+            spawnRate /= System.Math.Max((int)System.Math.Floor(config.SpawnRate), 1); // Since the return value is an integer, make sure to have a whole number.
         }
     }
 }
