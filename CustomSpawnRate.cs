@@ -87,7 +87,7 @@ namespace CustomSpawnRate
              * E.G. Spawn rate of 5, on pre-hardmode forest (600) = 600 / 5, 
              * which returns 120 w/o Calming/Battle buffs, 60 w/ Battle buff, and 240 w/ Calming buff.
             */
-            spawnRate /= System.Math.Max((int)System.Math.Floor(config.SpawnRate), 1); // Since the return value is an integer, make sure to have a whole number.
+            spawnRate /= System.Math.Max(config.SpawnRate, 1); // Since the return value is an integer, make sure to have a whole number.
         }
     }
 }
